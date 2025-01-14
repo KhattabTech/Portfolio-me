@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  background: linear-gradient(to right, #00ff8f 0%, #00a1ff 100%);
+  box-shadow: 0px 4.42184px 107.23px rgba(0, 255, 143, 0.51);
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #00a1ff 0%, #00ff8f 100%);
+}
+
+.gradient,
+.active {
+  background: linear-gradient(to right, #00a1ff 0%, #00ff8f 100%);
+}
+.text-accent {
+  background: linear-gradient(to right, #00ff8f 0%, #00a1ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.active {
+  color: #fff;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #00ff8f 0%, #00a1ff 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1a0f3b;
+}
+
+@layer base {
+  body {
+    @apply font-secondary text-lg leading-8 text-white;
+  }
+  .h2 {
+    @apply font-primary text-[32px] mb-6 tracking-[10%] uppercase  bg-gradient-to-r text-transparent bg-clip-text from-[#00ff8f] to-[#00a1ff] font-bold font-primary hover:from-[#00a1ff] hover:to-[#00ff8f];
+  }
+  .h3 {
+    @apply font-primary font-semibold text-[26px] mb-6 leading-[46px];
+  }
+  .btn {
+    @apply rounded-full font-primary text-white font-medium;
+  }
+  .btn-sm {
+    @apply h-[48px] px-6 text-sm;
+  }
+  .btn-lg {
+    @apply h-[56px] px-10 text-base;
+  }
+  .btn-link {
+    @apply text-base;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#00ff8f] to-[#00a1ff] font-bold font-primary hover:from-[#00a1ff] hover:to-[#00ff8f];
+  }
+  .text-accent {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#00ff8f] to-[#00a1ff] font-bold font-primary hover:from-[#00a1ff] hover:to-[#00ff8f];
+  }
+  .section {
+    @apply py-8 lg:py-24 lg:h-screen flex items-center;
+  }
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-on-small {
+    display: none;
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 5s linear infinite;
+}
