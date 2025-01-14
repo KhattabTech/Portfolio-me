@@ -77,9 +77,11 @@ const Banner = () => {
               className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0 gap-x-6 items-center mb-12 max-w-max mx-auto lg:mx-0"
             >
               <Link to="contact" className="btn btn-lg items-center flex cursor-pointer">Contact me</Link>
-              <Link to="" className="text-gradient btn-link">
-                Portfolio Cv
-              </Link>
+              <button className="text-gradient btn-link">
+              <a href="https://drive.google.com/file/d/147lq7fO-0udjehmSB8jn74P2h7NBCbmY/view?usp=drive_link">
+              Portfolio Cv
+              </a>
+              </button>
             </motion.div>
 
             <motion.div
